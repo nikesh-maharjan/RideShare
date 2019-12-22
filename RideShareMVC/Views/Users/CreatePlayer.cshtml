@@ -1,0 +1,48 @@
+﻿@model RideShareMVC.Models.Player
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreatePlayer</title>
+</head>
+<body>
+    <fieldset>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+
+            <p>
+                @Html.LabelFor(x => x.Name)
+                @Html.EditorFor(x => x.Name)
+                @Html.ValidationMessageFor(x => x.Name)
+            </p>
+
+            <p>
+                @Html.LabelFor(x => x.Age)
+                @Html.TextBoxFor(x => x.Age)
+                @Html.ValidationMessageFor(x => x.Age)
+            </p>
+
+            <p>
+                @Html.LabelFor(x => x.Password)
+                @Html.EditorFor(x => x.Password)
+                @Html.ValidationMessageFor(x => x.Password)
+            </p>
+
+            <p>
+                @Html.LabelFor(x => x.Comment)
+                @Html.EditorFor(x => x.Comment)
+                @Html.ValidationMessageFor(x => x.Comment)
+            </p>
+            <P>
+                <button type="submit">Create Player</button>
+            </P>
+        }
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿@*@model RideShareMVC.Models.TblUser*@
+@model dynamic
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+@{
+    TblUser user = Model.User;
+    Tbladdress address = Model.Address;
+}
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => user.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => user.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => user.EmailAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => user.EmailAddress)
+        </dd>
+    </dl>
+</div>
+@*<div>
+        <h4>User</h4>
+        <hr/>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Username)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model =>model.UserName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.EmailAddress)
+            </dd>
+        </dl>
+    </div>*@

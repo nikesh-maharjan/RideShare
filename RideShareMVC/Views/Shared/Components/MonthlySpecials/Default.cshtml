@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RideShareMVC.Models.MonthlySpecial>
+
+<h1>Monthly Specials</h1>
+@foreach (var special in Model)
+{
+    <h2 class="top">
+        @special.name
+    </h2>
+
+    <p>
+        @special.Type<br />
+        <a href="/tours/@(special.Key).htm">$@special.Price</a>
+    </p>
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Default</title>
+</head>
+<body>
+</body>
+</html>

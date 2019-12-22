@@ -1,0 +1,30 @@
+﻿@model IEnumerable<RideShareMVC.Models.TblUser>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>email Address</th>
+        <th></th>
+    </tr>
+
+    @foreach (var User in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => User.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => User.EmailAddress)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@User.UserGuid">Detail</a>
+            </td>
+        </tr>
+    }
+</table>

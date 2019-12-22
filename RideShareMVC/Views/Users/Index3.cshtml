@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+@section header{ 
+    <h1>Index 3 Header Section</h1>
+}
+<p>Use this area to provide additional information.</p>
+<p>Copyright Nikesh Maharjan @DateTime.Now.Year</p>
+<li>
+    <ul>
+        <li><a href="@Url.Action("Index","Users")" title="Index Page">GO to users page</a></li>
+        @*<li>@Html.ActionLink("Index Page", "Index","Users", null, new { title = "Users Index Page" })</li>*@
+    </ul>
+</li>

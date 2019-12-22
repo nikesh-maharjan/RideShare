@@ -1,0 +1,49 @@
+﻿@*@addTagHelper "Microsoft.AspNetCore.Mvc.FormTagHelper, Microsoft.AspNetCore.Mvc.TagHelpers"*@
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model RideShareMVC.Models.Player
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateRider</title>
+</head>
+<body>
+    <fieldset>
+        <form asp-action="CreateRider" asp-controller="Users">
+            <div asp-validation-summary="All" class="input-validation-error"></div>
+
+            <p>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" placeholder="Player given name" />
+                <span asp-validation-for="Name"></span>
+            </p>
+
+            <p>
+                <label asp-for="Age"></label>
+                <input asp-for="Age" class="form-control" placeholder="Players current age" />
+                <span asp-validation-for="Age"></span>
+            </p>
+
+            <p>
+                @Html.LabelFor(x => x.Password)
+                @Html.EditorFor(x => x.Password)
+                @Html.ValidationMessageFor(x => x.Password)
+            </p>
+
+            <p>
+                <label asp-for="Comment"></label>
+                <textarea asp-for="Comment" class="form-control" placeholder="Enter your comment"></textarea>
+                <span asp-validation-for="Comment"></span>
+            </p>
+
+            <P>
+                <button type="submit">Create Player</button>
+            </P>
+        </form>
+</body>
+</html>

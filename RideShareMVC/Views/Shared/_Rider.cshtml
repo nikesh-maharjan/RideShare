@@ -1,0 +1,24 @@
+﻿@inject RideShareMVC.Models.FormattingService Format
+@model RideShareMVC.Models.Player
+
+<article>
+    <h1>
+        @Html.ActionLink(Model.Name, "Rider","Users",
+            new { year = Model.Created.Year, month = Model.Created.Month, key=Model.Key}
+        )
+    </h1>
+    <div>
+        The player was added on <span>@Format.AsReadableDate(Model.Created)</span> and his age is <span>@Model.Age</span>
+    </div>
+
+    <div>
+        @Model.Country;
+    </div>
+    <div>
+        @Model.Comment;
+    </div>
+
+    <div class="btn-danger">
+        <button type="button" class="btn-danger" onclick="location.href='@Url.Action("CreateRider","Users")'">Create Rider</button>
+    </div>
+</article>

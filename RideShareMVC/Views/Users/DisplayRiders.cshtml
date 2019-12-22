@@ -1,0 +1,38 @@
+﻿@model IEnumerable<RideShareMVC.Models.Player>
+@addTagHelper *, RideShareMVC
+
+@section header{ 
+    <h1>
+        This is display riders heading
+    </h1>
+}
+<p>Below are the riders</p>
+
+<p class="pager">
+    @if (ViewBag.HasPreviousPage)
+    {
+        <a class="prev" href="@Url.Action("DisplayRiders","Users", new {page = ViewBag.PreviousPage})">
+            &lt; Previous
+        </a>
+    }
+
+    @if (ViewBag.HasNextPage)
+    {
+        <a class="next" href="@Url.Action("DisplayRiders","Users", new {page = ViewBag.NextPage})">
+            Next &gt;
+        </a>
+    }
+</p>
+
+<div>
+    @foreach(var Player in Model){ 
+        @await Html.PartialAsync("_Rider", Player)
+    }
+</div>
+
+<hr />
+
+<div>
+    <vc:monthly-specials/>
+</div>
+
