@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideShareMVC", "RideShareMVC\RideShareMVC.csproj", "{C3239210-6602-410C-9F42-522D8674BA70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideShareMVC", "RideShareMVC\RideShareMVC.csproj", "{C3239210-6602-410C-9F42-522D8674BA70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideShare.LLBLGEN.Model", "LLBLGEN\Model\RideShare.LLBLGEN.Model.csproj", "{D39C3BD3-4C8F-41EB-99C9-BD72CE9F1A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideShare.LLBLGEN.Persistence", "LLBLGEN\Persistence\RideShare.LLBLGEN.Persistence.csproj", "{A3ED7BEC-C6DE-4896-B9AE-497168240538}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C3239210-6602-410C-9F42-522D8674BA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3239210-6602-410C-9F42-522D8674BA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3239210-6602-410C-9F42-522D8674BA70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D39C3BD3-4C8F-41EB-99C9-BD72CE9F1A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D39C3BD3-4C8F-41EB-99C9-BD72CE9F1A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D39C3BD3-4C8F-41EB-99C9-BD72CE9F1A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D39C3BD3-4C8F-41EB-99C9-BD72CE9F1A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3ED7BEC-C6DE-4896-B9AE-497168240538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3ED7BEC-C6DE-4896-B9AE-497168240538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3ED7BEC-C6DE-4896-B9AE-497168240538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3ED7BEC-C6DE-4896-B9AE-497168240538}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -191,12 +191,12 @@ namespace RideShareMVC.Models
                     .HasColumnName("emailAddress")
                     .HasMaxLength(40);
 
+                //entity.Property(e => e.Password)
+                //    .IsRequired()
+                //    .HasMaxLength(128);
                 entity.Property(e => e.Password)
                     .IsRequired()
-                    .HasMaxLength(128);
-                //entity.Property(e => e.GetPassword())
-                //    .IsRequired()
-                //    .HasMaxLength(50);
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.UserCreateDate)
                     .HasColumnName("user_createDate")

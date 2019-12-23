@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RideShareMVC.Models;
+using RideShare.LLBLGEN.EntityClasses;
+using RideShare.LLBLGEN.TypedListClasses;
+using RideShare.LLBLGEN.TypedViewClasses;
+
 
 namespace RideShareMVC.Controllers
 {
@@ -24,6 +28,8 @@ namespace RideShareMVC.Controllers
         //[Route("..")]
         public IActionResult Index()
         {
+            RideShare.LLBLGEN.EntityClasses.TblUser tblUser = new RideShare.LLBLGEN.EntityClasses.TblUser();
+            
             return View(_context.TblUser.ToList());
         }
 

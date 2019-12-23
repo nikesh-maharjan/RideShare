@@ -20,7 +20,7 @@ namespace RideShareMVC.Models
         public Guid UserGuid { get; set; }
         public string UserName { get; set; }
         public string EmailAddress { get; set; }
-        public byte[] Password { get; set; }
+        public string Password { get; set; }
 
         //private byte[] password;
 
@@ -29,14 +29,14 @@ namespace RideShareMVC.Models
         //    return Password;
         //}
 
-        public void SetPassword(String value)
-        {
-            using (MD5 md5Hash = MD5.Create())
-            {
-                byte[] hash = GetMD5Hash(md5Hash, value);
-                Password = hash;
-            }
-        }
+        //public void SetPassword(String value)
+        //{
+        //    using (MD5 md5Hash = MD5.Create())
+        //    {
+        //        byte[] hash = GetMD5Hash(md5Hash, value);
+        //        Password = hash;
+        //    }
+        //}
         private byte[] GetMD5Hash(MD5 md5Hash, String password)
         {
             // Convert the input string to a byte array and compute the hash.

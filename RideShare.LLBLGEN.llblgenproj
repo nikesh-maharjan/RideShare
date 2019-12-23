@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--LLBLGen Pro v5.6 project file. Do not manually edit this file. Incorrect references could lead to an unloadable project file.-->
+<Project Version="5.6" TargetFrameworkName="Entity Framework Core v2.1" UseLegacyDefaults="false">
+  <Properties>
+    <Abbreviations />
+    <Property Name="AdditionalTaskPerformerFolder" Value="" />
+    <Property Name="AdditionalTasksFolder" Value="" />
+    <Property Name="AdditionalTemplatesFolder" Value="" />
+    <Property Name="AdditionalTypeConverterFolder" Value="" />
+    <Property Name="AddNewElementsAfterRefresh_v5" Value="false" />
+    <Property Name="AddNewElementsAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="AddNewFieldsAfterRefresh_v5" Value="true" />
+    <Property Name="AddNewFieldsAfterRelationalModelDataSync_v5" Value="true" />
+    <Property Name="AddNewViewsAsEntitiesAfterRefresh_v5" Value="false" />
+    <Property Name="AddNewViewsAsEntitiesAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="AutoAddManyToManyRelationships" Value="false" />
+    <Property Name="AutoAssignSequencesToIntegerPks" Value="true" />
+    <Property Name="AutoAssignTypeConverterToFieldMapping" Value="true" />
+    <Property Name="AutomaticallyGenerateSourceCodeOnProjectSave" Value="true" />
+    <Property Name="ConnectionStringKeyNamePattern" Value="ConnectionString.{$ProviderName}" />
+    <Property Name="DefaultDeleteRuleAction" Value="1" />
+    <Property Name="DefaultUpdateRuleAction" Value="0" />
+    <Property Name="DeleteObsoleteFiles" Value="true" />
+    <Property Name="EncodingToUse" Value="0" />
+    <Property Name="EntityActionCombinationDefaultForTable" Value="0" />
+    <Property Name="EntityActionCombinationDefaultForView" Value="4" />
+    <Property Name="EntityFieldNameStripPattern" Value="{}{}" />
+    <Property Name="EntityNameStripPattern" Value="{tbl_}{}" />
+    <Property Name="ExcludableOrphanedElementDetectedAction" Value="3" />
+    <Property Name="FailCodeGenerationOnWriteError" Value="false" />
+    <Property Name="FieldMappedOntoRelatedFieldPattern" Value="{$RelatedFieldName}" />
+    <Property Name="FkFieldsAreNamedAfterTargetField" Value="true" />
+    <Property Name="ForeignKeyConstraintPattern" Value="FK_{$Guid}" />
+    <Property Name="ForeignKeyFieldPattern" Value="{$NavigatorName}{$RelatedFieldName}" />
+    <Property Name="GroupUsage" Value="0" />
+    <Property Name="IdentifyingFieldsFollowDBPrimaryKeyConstraints_v5" Value="true" />
+    <Property Name="InsertUnderscoreAtWordBreakCaseInsensitiveDBs" Value="false" />
+    <Property Name="InsertUnderscoreAtWordBreakCaseSensitiveDBs" Value="false" />
+    <Property Name="LengthPrecisionScaleFollowDBLengthPrecisionScale_v5" Value="true" />
+    <Property Name="MakeElementNamePascalCasing" Value="true" />
+    <Property Name="NavigatorMappedOntoManyToManyPattern" Value="{$EndEntityName}CollectionVia{$IntermediateEntityName$S}" />
+    <Property Name="NavigatorMappedOntoOneManyToOnePattern" Value="{$EndEntityName$S}" />
+    <Property Name="NavigatorMappedOntoOneToManyPattern" Value="{$EndEntityName$P}" />
+    <Property Name="NonExcludableOrphanedElementDetectedAction" Value="3" />
+    <Property Name="PreferDecimalOverCurrencyTypes" Value="true" />
+    <Property Name="PreferNaturalCharacterTypes" Value="true" />
+    <Property Name="PreferSystemSequencesOverSchemaSequencesIfApplicable" Value="true" />
+    <Property Name="PreferVariableLengthTypes" Value="true" />
+    <Property Name="PrimaryKeyConstraintPattern" Value="PK_{$Guid}" />
+    <Property Name="ProjectCreator" Value="Nikesh" />
+    <Property Name="ProjectName" Value="RideShare.LLBLGEN" />
+    <Property Name="ReflectNullabilityOfElementFieldInTargetField_v5" Value="false" />
+    <Property Name="ReflectTypeOfElementFieldInTargetField_v5" Value="true" />
+    <Property Name="RelationalModelDataElementNameCasingCaseInsensitiveDBs" Value="3" />
+    <Property Name="RelationalModelDataElementNameCasingCaseSensitiveDBs" Value="3" />
+    <Property Name="RelationshipsFollowDBForeignKeyConstraints_v5" Value="true" />
+    <Property Name="RemoveUnderscoresFromElementName" Value="true" />
+    <Property Name="RemoveUnmappedElementsAfterRefresh_v5" Value="false" />
+    <Property Name="RemoveUnmappedElementsAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="ResetFieldOrderBasedOnTargetOrderAtRefresh" Value="false" />
+    <Property Name="ResetFieldOrderBasedOnTargetOrderAtRelationalModelDataSync" Value="false" />
+    <Property Name="RetrieveDBCustomProperties" Value="false" />
+    <Property Name="RootNamespace" Value="RideShare.LLBLGEN" />
+    <Property Name="SequenceNameMatchingPattern" Value="SEQ_{$TableName}" />
+    <Property Name="SequencePattern" Value="SEQ_{$EntityName}" />
+    <Property Name="SetGroupNameAfterSchemaName" Value="true" />
+    <Property Name="SetSchemaNameAfterGroupName" Value="true" />
+    <Property Name="SingularizeElementNames" Value="true" />
+    <Property Name="StoredProcNameStripPattern" Value="{pr_, sp_}{}" />
+    <Property Name="StoreTimeLastGeneratedIntoProject" Value="false" />
+    <Property Name="StoreTimeLastSyncIntoProject" Value="true" />
+    <Property Name="SyncCustomFieldOrderingWithTableFieldIndex" Value="false" />
+    <Property Name="SyncMappedElementNamesAfterRefresh_v5" Value="false" />
+    <Property Name="SyncMappedElementNamesAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="SyncRelationalModelDataElementNameWithModelElementName_v5" Value="false" />
+    <Property Name="SyncRenamedMappedElementNamesAfterRefresh_v5" Value="false" />
+    <Property Name="SyncRenamedMappedElementNamesAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="TableValuedFunctionNameStripPattern" Value="{fn_, pr_, sp_}{}" />
+    <Property Name="TargetPerEntityEdgesRequireBackingFkConstraint" Value="true" />
+    <Property Name="TypedViewFieldNameStripPattern" Value="{}{}" />
+    <Property Name="TypedViewMappedOnResultsetPattern" Value="{$ProcFunctionName}{$ResultsetName}Result" />
+    <Property Name="TypedViewNameStripPattern" Value="{vw_}{}" />
+    <Property Name="UniqueConstraintPattern" Value="UC_{$Guid}" />
+    <Property Name="UniqueConstraintsFollowDBUniqueConstraints_v5" Value="true" />
+    <Property Name="UpdateCustomPropertiesAfterRefresh_v5" Value="false" />
+    <Property Name="UpdateCustomPropertiesAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="UseCustomFieldOrderingOnNewElements" Value="false" />
+  </Properties>
+  <TypeShortcuts />
+  <IgnoredWarnings />
+  <SavedSearchQueries />
+  <CodeGenerationCyclePreferences>
+    <OutputType Value="3">
+      <LastUsedPreferences>
+        <DestinationRootFolder Value=".\LLBLGEN" />
+        <FrameworkName Value="Entity Framework Core v2.1" />
+        <LanguageName Value="C#" />
+        <PlatformName Value=".NET 4.6.1" />
+        <PresetName Value="SD.EntityFramework.Core v2.1" />
+        <RootNamespace Value="RideShare.LLBLGEN" />
+        <TemplateGroup Value="General" />
+        <TemplateBindings>
+          <Binding Name="SD.EntityFramework.Core v2.1" />
+          <Binding Name="SD.EntityFramework.NET45" />
+          <Binding Name="SD.EntityFramework.Shared" />
+          <Binding Name="SD.TemplateBindings.General" />
+        </TemplateBindings>
+        <AdhocTemplateSets />
+      </LastUsedPreferences>
+    </OutputType>
+    <OutputType Value="1">
+      <LastUsedPreferences>
+        <DestinationRootFolder Value="" />
+        <FrameworkName Value="DDL SQL" />
+        <LanguageName Value="SQL" />
+        <PlatformName Value="RDBMS" />
+        <PresetName Value="" />
+        <RootNamespace Value="" />
+        <TemplateGroup Value="Create DDL SQL" />
+        <TemplateBindings />
+        <AdhocTemplateSets />
+      </LastUsedPreferences>
+    </OutputType>
+  </CodeGenerationCyclePreferences>
+  <OutputSettingValues>
+    <SettingValues>
+      <SettingValue Name="1:CollectionNavigatorTypeDefault" Value="List&lt;T&gt;" Type="18" />
+      <SettingValue Name="1:EmitForeignKeyFields" Value="true" Type="3" />
+      <SettingValue Name="1:EntityBaseClassNameDefault" Value="CommonEntityBase" Type="18" />
+      <SettingValue Name="1:GenerateAsVirtualPropertyDefault" Value="true" Type="3" />
+      <SettingValue Name="1:GenerateReadOnlyFieldsAsReadOnlyProperties" Value="false" Type="3" />
+      <SettingValue Name="1:MapUnmappedFieldsAsShadowPropertiesDefault" Value="false" Type="3" />
+      <SettingValue Name="1:SupportedActionCombinations" Value="0,4" Type="18" />
+      <SettingValue Name="1:UsePrivateBackingFieldDefault" Value="false" Type="3" />
+      <SettingValue Name="1:ValueTypeBaseClassNameDefault" Value="CommonValueTypeBase" Type="18" />
+    </SettingValues>
+  </OutputSettingValues>
+  <CodeGenerationMetaDataDefaults />
+  <EntityModel>
+    <ValueTypeDefinitions />
+    <EntityDefinitions>
+      <EntityDefinition Name="Tbladdress" ObjectID="97135646-102e-492b-bbef-02e71911bd90">
+        <Fields>
+          <Field Name="AddressCreateDate" Type="datetime" />
+          <Field Name="AddressGuid" Type="guid" IsPrimaryKey="true" />
+          <Field Name="AddressUpdateDate" Type="datetime" />
+          <Field Name="City" Type="string" IsOptional="true" MaxLength="10" />
+          <Field Name="PostalCode" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="State" Type="string" MaxLength="2" />
+          <Field Name="Street1" Type="string" MaxLength="20" />
+          <Field Name="Street2" Type="string" IsOptional="true" MaxLength="20" />
+          <Field Name="UserGuid" Type="guid" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Tblcontact" ObjectID="b33c072e-5dcd-40c6-b8e3-4cc86dc04ba3">
+        <Fields>
+          <Field Name="ContactCreateDate" Type="datetime" />
+          <Field Name="ContactGuid" Type="guid" IsPrimaryKey="true" />
+          <Field Name="ContactType" Type="guid" IsOptional="true" />
+          <Field Name="ContactUpdateDate" Type="datetime" />
+          <Field Name="ContactValue" Type="string" MaxLength="10" />
+          <Field Name="IsActive" Type="string" MaxLength="1" />
+          <Field Name="UserGuid" Type="guid" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="TblContactType" ObjectID="13d147d6-c430-45f6-bc56-f42d8f215dd7">
+        <Fields>
+          <Field Name="ContactType" Type="string" IsOptional="true" MaxLength="6" />
+          <Field Name="ContactTypeCreateDate" Type="datetime" />
+          <Field Name="ContactTypeGuid" Type="guid" IsPrimaryKey="true" />
+          <Field Name="ContactTypeUpdateDate" Type="datetime" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="TblRide" ObjectID="0f57c71d-7845-45c0-95dd-6234e70a589d">
+        <Fields>
+          <Field Name="RideCreateDate" Type="datetime" />
+          <Field Name="RideEndAddressGuid" Type="guid" />
+          <Field Name="RideEndDateTime" Type="datetime" />
+          <Field Name="RideFromGuid" Type="guid" />
+          <Field Name="RideGuid" Type="guid" IsPrimaryKey="true" />
+          <Field Name="RideStartAddressGuid" Type="guid" />
+          <Field Name="RideStartDateTime" Type="datetime" />
+          <Field Name="RideToGuid" Type="guid" />
+          <Field Name="RideUpdateDate" Type="datetime" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="TblRideRequest" ObjectID="47236188-10dd-4464-8184-fe73da154ec4">
+        <Fields>
+          <Field Name="RequestCreateDate" Type="datetime" />
+          <Field Name="RequestEndAddressGuid" Type="guid" />
+          <Field Name="RequestEndDateTime" Type="datetime" />
+          <Field Name="RequestFromGuid" Type="guid" />
+          <Field Name="RequestStartAddressGuid" Type="guid" />
+          <Field Name="RequestStartDateTime" Type="datetime" />
+          <Field Name="RequestToGuid" Type="guid" />
+          <Field Name="RequestUpdateDate" Type="datetime" />
+          <Field Name="RideRequestGuid" Type="guid" IsPrimaryKey="true" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="TblUser" ObjectID="1fc92b86-975c-493d-8e61-46c9bf9284f0">
+        <Fields>
+          <Field Name="EmailAddress" Type="string" MaxLength="40" />
+          <Field Name="Password" Type="string" IsOptional="true" MaxLength="100" />
+          <Field Name="UserCreateDate" Type="datetime" IsOptional="true" />
+          <Field Name="UserGuid" Type="guid" IsPrimaryKey="true" />
+          <Field Name="UserName" Type="string" MaxLength="30" />
+          <Field Name="UserUpdateDate" Type="datetime" IsOptional="true" />
+        </Fields>
+      </EntityDefinition>
+    </EntityDefinitions>
+    <Relationships>
+      <NormalRelationship Name="Tbladdress.TblUser-TblUser.Tbladdresses" Start=":Tbladdress" End=":TblUser" StartNavigator="TblUser" EndNavigator="Tbladdresses" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserGuid" PkField="UserGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Tblcontact.TblContactType-TblContactType.Tblcontacts" Start=":Tblcontact" End=":TblContactType" StartNavigator="TblContactType" EndNavigator="Tblcontacts" Type="4" EndIsOptional="true">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="ContactType" PkField="ContactTypeGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Tblcontact.TblUser-TblUser.Tblcontacts" Start=":Tblcontact" End=":TblUser" StartNavigator="TblUser" EndNavigator="Tblcontacts" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserGuid" PkField="UserGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="TblRide.Tbladdress-Tbladdress.TblRides" Start=":TblRide" End=":Tbladdress" StartNavigator="Tbladdress" EndNavigator="TblRides" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RideStartAddressGuid" PkField="AddressGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="TblRide.Tbladdress1-Tbladdress.TblRides1" Start=":TblRide" End=":Tbladdress" StartNavigator="Tbladdress1" EndNavigator="TblRides1" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RideEndAddressGuid" PkField="AddressGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="TblRide.TblUser-TblUser.TblRides" Start=":TblRide" End=":TblUser" StartNavigator="TblUser" EndNavigator="TblRides" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RideFromGuid" PkField="UserGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="TblRide.TblUser1-TblUser.TblRides1" Start=":TblRide" End=":TblUser" StartNavigator="TblUser1" EndNavigator="TblRides1" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RideToGuid" PkField="UserGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="TblRideRequest.Tbladdress-Tbladdress.TblRideRequests" Start=":TblRideRequest" End=":Tbladdress" StartNavigator="Tbladdress" EndNavigator="TblRideRequests" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RequestStartAddressGuid" PkField="AddressGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="TblRideRequest.Tbladdress1-Tbladdress.TblRideRequests1" Start=":TblRideRequest" End=":Tbladdress" StartNavigator="Tbladdress1" EndNavigator="TblRideRequests1" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RequestEndAddressGuid" PkField="AddressGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="TblRideRequest.TblUser-TblUser.TblRideRequests" Start=":TblRideRequest" End=":TblUser" StartNavigator="TblUser" EndNavigator="TblRideRequests" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RequestFromGuid" PkField="UserGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="TblRideRequest.TblUser1-TblUser.TblRideRequests1" Start=":TblRideRequest" End=":TblUser" StartNavigator="TblUser1" EndNavigator="TblRideRequests1" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RequestToGuid" PkField="UserGuid" />
+        </FieldRelationships>
+      </NormalRelationship>
+    </Relationships>
+    <InheritanceHierarchies />
+  </EntityModel>
+  <TypedListDefinitions>
+    <TypedListDefinition Name="MyTypedList">
+      <EntityAliases>
+        <EntityAlias Entity=":Tbladdress" />
+        <EntityAlias Entity=":Tblcontact" />
+        <EntityAlias Entity=":TblContactType" />
+        <EntityAlias Entity=":TblRide" />
+        <EntityAlias Entity=":TblRideRequest" />
+        <EntityAlias Entity=":TblUser" />
+      </EntityAliases>
+      <Fields>
+        <Field FieldAlias="AddressCreateDate" TargetField="Tbladdress.AddressCreateDate" />
+        <Field FieldAlias="AddressGuid" TargetField="Tbladdress.AddressGuid" />
+        <Field FieldAlias="AddressUpdateDate" TargetField="Tbladdress.AddressUpdateDate" />
+        <Field FieldAlias="City" TargetField="Tbladdress.City" />
+        <Field FieldAlias="PostalCode" TargetField="Tbladdress.PostalCode" />
+        <Field FieldAlias="State" TargetField="Tbladdress.State" />
+        <Field FieldAlias="Street1" TargetField="Tbladdress.Street1" />
+        <Field FieldAlias="Street2" TargetField="Tbladdress.Street2" />
+        <Field FieldAlias="UserGuid" TargetField="Tbladdress.UserGuid" />
+        <Field FieldAlias="ContactCreateDate" TargetField="Tblcontact.ContactCreateDate" />
+        <Field FieldAlias="ContactGuid" TargetField="Tblcontact.ContactGuid" />
+        <Field FieldAlias="ContactType" TargetField="Tblcontact.ContactType" />
+        <Field FieldAlias="ContactUpdateDate" TargetField="Tblcontact.ContactUpdateDate" />
+        <Field FieldAlias="ContactValue" TargetField="Tblcontact.ContactValue" />
+        <Field FieldAlias="IsActive" TargetField="Tblcontact.IsActive" />
+        <Field FieldAlias="UserGuid1" Caption="UserGuid" TargetField="Tblcontact.UserGuid" />
+        <Field FieldAlias="ContactType1" Caption="ContactType" TargetField="TblContactType.ContactType" />
+        <Field FieldAlias="ContactTypeCreateDate" TargetField="TblContactType.ContactTypeCreateDate" />
+        <Field FieldAlias="ContactTypeGuid" TargetField="TblContactType.ContactTypeGuid" />
+        <Field FieldAlias="ContactTypeUpdateDate" TargetField="TblContactType.ContactTypeUpdateDate" />
+        <Field FieldAlias="RideCreateDate" TargetField="TblRide.RideCreateDate" />
+        <Field FieldAlias="RideEndAddressGuid" TargetField="TblRide.RideEndAddressGuid" />
+        <Field FieldAlias="RideEndDateTime" TargetField="TblRide.RideEndDateTime" />
+        <Field FieldAlias="RideFromGuid" TargetField="TblRide.RideFromGuid" />
+        <Field FieldAlias="RideGuid" TargetField="TblRide.RideGuid" />
+        <Field FieldAlias="RideStartAddressGuid" TargetField="TblRide.RideStartAddressGuid" />
+        <Field FieldAlias="RideStartDateTime" TargetField="TblRide.RideStartDateTime" />
+        <Field FieldAlias="RideToGuid" TargetField="TblRide.RideToGuid" />
+        <Field FieldAlias="RideUpdateDate" TargetField="TblRide.RideUpdateDate" />
+        <Field FieldAlias="RequestCreateDate" TargetField="TblRideRequest.RequestCreateDate" />
+        <Field FieldAlias="RequestEndAddressGuid" TargetField="TblRideRequest.RequestEndAddressGuid" />
+        <Field FieldAlias="RequestEndDateTime" TargetField="TblRideRequest.RequestEndDateTime" />
+        <Field FieldAlias="RequestFromGuid" TargetField="TblRideRequest.RequestFromGuid" />
+        <Field FieldAlias="RequestStartAddressGuid" TargetField="TblRideRequest.RequestStartAddressGuid" />
+        <Field FieldAlias="RequestStartDateTime" TargetField="TblRideRequest.RequestStartDateTime" />
+        <Field FieldAlias="RequestToGuid" TargetField="TblRideRequest.RequestToGuid" />
+        <Field FieldAlias="RequestUpdateDate" TargetField="TblRideRequest.RequestUpdateDate" />
+        <Field FieldAlias="RideRequestGuid" TargetField="TblRideRequest.RideRequestGuid" />
+        <Field FieldAlias="EmailAddress" TargetField="TblUser.EmailAddress" />
+        <Field FieldAlias="Password" TargetField="TblUser.Password" />
+        <Field FieldAlias="UserCreateDate" TargetField="TblUser.UserCreateDate" />
+        <Field FieldAlias="UserGuid2" Caption="UserGuid" TargetField="TblUser.UserGuid" />
+        <Field FieldAlias="UserName" TargetField="TblUser.UserName" />
+        <Field FieldAlias="UserUpdateDate" TargetField="TblUser.UserUpdateDate" />
+      </Fields>
+      <Relationships>
+        <Relationship Name="Tbladdress.TblUser-TblUser.Tbladdresses" StartAlias="Tbladdress" EndAlias="TblUser" JoinHint="1" StartAliasIsStartVertex="true" />
+        <Relationship Name="Tblcontact.TblContactType-TblContactType.Tblcontacts" StartAlias="TblContactType" EndAlias="Tblcontact" JoinHint="1" />
+        <Relationship Name="Tblcontact.TblUser-TblUser.Tblcontacts" StartAlias="Tblcontact" EndAlias="TblUser" JoinHint="1" StartAliasIsStartVertex="true" />
+        <Relationship Name="TblRide.TblUser-TblUser.TblRides" StartAlias="TblRide" EndAlias="TblUser" JoinHint="1" StartAliasIsStartVertex="true" />
+        <Relationship Name="TblRideRequest.TblUser-TblUser.TblRideRequests" StartAlias="TblRideRequest" EndAlias="TblUser" JoinHint="1" StartAliasIsStartVertex="true" />
+      </Relationships>
+    </TypedListDefinition>
+  </TypedListDefinitions>
+  <TypedViewDefinitions>
+    <TypedViewDefinition Name="Tbladdress1" ObjectID="bb57826b-4913-493e-affd-96a03c3231b5">
+      <Fields>
+        <Field Name="AddressCreateDate" Type="datetime" />
+        <Field Name="AddressGuid" Type="guid" IsPrimaryKey="true" />
+        <Field Name="AddressUpdateDate" Type="datetime" />
+        <Field Name="City" Type="string" IsOptional="true" MaxLength="10" />
+        <Field Name="PostalCode" Type="int" IsOptional="true" Precision="10" />
+        <Field Name="State" Type="string" MaxLength="2" />
+        <Field Name="Street1" Type="string" MaxLength="20" />
+        <Field Name="Street2" Type="string" IsOptional="true" MaxLength="20" />
+        <Field Name="UserGuid" Type="guid" />
+      </Fields>
+    </TypedViewDefinition>
+    <TypedViewDefinition Name="Tblcontact1" ObjectID="0f32e066-3fdc-411f-ba6a-108ed5f845ea">
+      <Fields>
+        <Field Name="ContactCreateDate" Type="datetime" />
+        <Field Name="ContactGuid" Type="guid" IsPrimaryKey="true" />
+        <Field Name="ContactType" Type="guid" IsOptional="true" />
+        <Field Name="ContactUpdateDate" Type="datetime" />
+        <Field Name="ContactValue" Type="string" MaxLength="10" />
+        <Field Name="IsActive" Type="string" MaxLength="1" />
+        <Field Name="UserGuid" Type="guid" />
+      </Fields>
+    </TypedViewDefinition>
+    <TypedViewDefinition Name="TblContactType1" ObjectID="fe0d3947-5e7e-483b-967d-bfa13d31339c">
+      <Fields>
+        <Field Name="ContactType" Type="string" IsOptional="true" MaxLength="6" />
+        <Field Name="ContactTypeCreateDate" Type="datetime" />
+        <Field Name="ContactTypeGuid" Type="guid" IsPrimaryKey="true" />
+        <Field Name="ContactTypeUpdateDate" Type="datetime" />
+      </Fields>
+    </TypedViewDefinition>
+    <TypedViewDefinition Name="TblRide1" ObjectID="b0c0d35d-020b-4710-9b46-e27b90a49bc4">
+      <Fields>
+        <Field Name="RideCreateDate" Type="datetime" />
+        <Field Name="RideEndAddressGuid" Type="guid" />
+        <Field Name="RideEndDateTime" Type="datetime" />
+        <Field Name="RideFromGuid" Type="guid" />
+        <Field Name="RideGuid" Type="guid" IsPrimaryKey="true" />
+        <Field Name="RideStartAddressGuid" Type="guid" />
+        <Field Name="RideStartDateTime" Type="datetime" />
+        <Field Name="RideToGuid" Type="guid" />
+        <Field Name="RideUpdateDate" Type="datetime" />
+      </Fields>
+    </TypedViewDefinition>
+    <TypedViewDefinition Name="TblRideRequest1" ObjectID="1c15f21a-4c5a-4a90-a698-dd85aab90c8e">
+      <Fields>
+        <Field Name="RequestCreateDate" Type="datetime" />
+        <Field Name="RequestEndAddressGuid" Type="guid" />
+        <Field Name="RequestEndDateTime" Type="datetime" />
+        <Field Name="RequestFromGuid" Type="guid" />
+        <Field Name="RequestStartAddressGuid" Type="guid" />
+        <Field Name="RequestStartDateTime" Type="datetime" />
+        <Field Name="RequestToGuid" Type="guid" />
+        <Field Name="RequestUpdateDate" Type="datetime" />
+        <Field Name="RideRequestGuid" Type="guid" IsPrimaryKey="true" />
+      </Fields>
+    </TypedViewDefinition>
+    <TypedViewDefinition Name="TblUser1" ObjectID="bdb7c161-466c-450e-a425-767dcea277ca">
+      <Fields>
+        <Field Name="EmailAddress" Type="string" MaxLength="40" />
+        <Field Name="Password" Type="string" IsOptional="true" MaxLength="100" />
+        <Field Name="UserCreateDate" Type="datetime" IsOptional="true" />
+        <Field Name="UserGuid" Type="guid" IsPrimaryKey="true" />
+        <Field Name="UserName" Type="string" MaxLength="30" />
+        <Field Name="UserUpdateDate" Type="datetime" IsOptional="true" />
+      </Fields>
+    </TypedViewDefinition>
+  </TypedViewDefinitions>
+  <TargetDatabases>
+    <TargetDatabase Type="2D18D138-1DD2-467E-86CC-4838250611AE" SyncSource="2">
+      <ConnectionElements>
+        <ConnectionElement Name="ServerName" Value="Nikesh-Desktop" />
+        <ConnectionElement Name="CatalogName" Value="master" />
+        <ConnectionElement Name="UseWindowsAuthentication" Value="true" />
+        <ConnectionElement Name="UserID" Value="" />
+        <ConnectionElement Name="Password" Value="" />
+      </ConnectionElements>
+      <SystemSequences>
+        <Sequence Name="SCOPE_IDENTITY()" />
+        <Sequence Name="@@IDENTITY" />
+      </SystemSequences>
+      <Catalogs>
+        <Catalog Name="RideShare" SyncSource="2">
+          <Schemas>
+            <Schema Name="dbo" SyncSource="2" LastSyncWithDatabase="2019-12-23T01:33:12.442013Z">
+              <Tables>
+                <Table Name="tbladdress">
+                  <PkConstraintName Name="PK_tbladdress" />
+                  <Fields>
+                    <Field Name="address_Guid" Ordinal="1" IsPrimaryKey="true" DbType="25" />
+                    <Field Name="user_Guid" Ordinal="2" DbType="25" />
+                    <Field Name="street1" Ordinal="3" DbType="10" Length="20" />
+                    <Field Name="street2" Ordinal="4" IsOptional="true" DbType="10" Length="20" />
+                    <Field Name="City" Ordinal="5" IsOptional="true" DbType="10" Length="10" />
+                    <Field Name="state" Ordinal="6" DbType="10" Length="2" />
+                    <Field Name="postal_code" Ordinal="7" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="address_createDate" Ordinal="8" DbType="4" />
+                    <Field Name="address_updateDate" Ordinal="9" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="tblcontact">
+                  <PkConstraintName Name="PK_tblcontact" />
+                  <Fields>
+                    <Field Name="contact_Guid" Ordinal="1" IsPrimaryKey="true" DbType="25" />
+                    <Field Name="user_Guid" Ordinal="2" DbType="25" />
+                    <Field Name="contactType" Ordinal="3" IsOptional="true" DbType="25" />
+                    <Field Name="contactValue" Ordinal="4" DbType="24" Length="10" />
+                    <Field Name="isActive" Ordinal="5" DbType="3" Length="1" />
+                    <Field Name="contact_createDate" Ordinal="6" DbType="4" />
+                    <Field Name="contact_updateDate" Ordinal="7" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="tblContactType">
+                  <PkConstraintName Name="PK_tblContactType" />
+                  <Fields>
+                    <Field Name="contactType_Guid" Ordinal="1" IsPrimaryKey="true" DbType="25" />
+                    <Field Name="contactType" Ordinal="2" IsOptional="true" DbType="10" Length="6" />
+                    <Field Name="contactType_CreateDate" Ordinal="3" DbType="4" />
+                    <Field Name="contactType_updateDate" Ordinal="4" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="tblRide">
+                  <PkConstraintName Name="PK_tblRide" />
+                  <Fields>
+                    <Field Name="ride_GUID" Ordinal="1" IsPrimaryKey="true" DbType="25" />
+                    <Field Name="rideFrom_GUID" Ordinal="2" DbType="25" />
+                    <Field Name="rideTo_GUID" Ordinal="3" DbType="25" />
+                    <Field Name="rideStartDateTime" Ordinal="4" DbType="4" />
+                    <Field Name="rideEndDateTime" Ordinal="5" DbType="4" />
+                    <Field Name="rideStartAddress_Guid" Ordinal="6" DbType="25" />
+                    <Field Name="rideEndAddress_Guid" Ordinal="7" DbType="25" />
+                    <Field Name="ride_createDate" Ordinal="8" DbType="4" />
+                    <Field Name="ride_updateDate" Ordinal="9" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="tblRideRequest">
+                  <PkConstraintName Name="PK_tblRideRequest" />
+                  <Fields>
+                    <Field Name="rideRequest_GUID" Ordinal="1" IsPrimaryKey="true" DbType="25" />
+                    <Field Name="requestFrom_GUID" Ordinal="2" DbType="25" />
+                    <Field Name="requestTo_GUID" Ordinal="3" DbType="25" />
+                    <Field Name="requestStartDateTime" Ordinal="4" DbType="4" />
+                    <Field Name="requestEndDateTime" Ordinal="5" DbType="4" />
+                    <Field Name="requestStartAddress_Guid" Ordinal="6" DbType="25" />
+                    <Field Name="requestEndAddress_Guid" Ordinal="7" DbType="25" />
+                    <Field Name="request_createDate" Ordinal="8" DbType="4" />
+                    <Field Name="request_updateDate" Ordinal="9" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="tblUser">
+                  <PkConstraintName Name="PK_tblUser" />
+                  <Fields>
+                    <Field Name="user_GUID" Ordinal="1" IsPrimaryKey="true" DbType="25" />
+                    <Field Name="userName" Ordinal="2" DbType="10" Length="30" />
+                    <Field Name="emailAddress" Ordinal="3" DbType="10" Length="40" />
+                    <Field Name="Password" Ordinal="4" IsOptional="true" DbType="24" Length="100" />
+                    <Field Name="user_createDate" Ordinal="5" IsOptional="true" DbType="4" />
+                    <Field Name="user_updateDate" Ordinal="6" IsOptional="true" DbType="4" />
+                  </Fields>
+                </Table>
+              </Tables>
+            </Schema>
+          </Schemas>
+          <ForeignKeyConstraints>
+            <ForeignKeyConstraint Name="dbo:tbladdress:FK_tbladdress_tblUser">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tblUser:user_GUID" FkField="dbo:tbladdress:user_Guid" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblcontact:FK_tblcontact_tblContactType">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tblContactType:contactType_Guid" FkField="dbo:tblcontact:contactType" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblcontact:FK_tblcontact_tblUser">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tblUser:user_GUID" FkField="dbo:tblcontact:user_Guid" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblRide:FK_tblRide_tbladdress">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tbladdress:address_Guid" FkField="dbo:tblRide:rideStartAddress_Guid" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblRide:FK_tblRide_tbladdress1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tbladdress:address_Guid" FkField="dbo:tblRide:rideEndAddress_Guid" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblRide:FK_tblRide_tblUser">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tblUser:user_GUID" FkField="dbo:tblRide:rideFrom_GUID" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblRide:FK_tblRide_tblUser1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tblUser:user_GUID" FkField="dbo:tblRide:rideTo_GUID" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblRideRequest:FK_tblRideRequest_tbladdress">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tbladdress:address_Guid" FkField="dbo:tblRideRequest:requestStartAddress_Guid" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblRideRequest:FK_tblRideRequest_tbladdress1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tbladdress:address_Guid" FkField="dbo:tblRideRequest:requestEndAddress_Guid" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblRideRequest:FK_tblRideRequest_tblUser">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tblUser:user_GUID" FkField="dbo:tblRideRequest:requestFrom_GUID" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:tblRideRequest:FK_tblRideRequest_tblUser1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:tblUser:user_GUID" FkField="dbo:tblRideRequest:requestTo_GUID" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+          </ForeignKeyConstraints>
+        </Catalog>
+      </Catalogs>
+    </TargetDatabase>
+  </TargetDatabases>
+  <MappingStores>
+    <MappingStore Type="2D18D138-1DD2-467E-86CC-4838250611AE">
+      <EntityMappings>
+        <EntityMapping EntityName=":Tbladdress" TargetName="RideShare:dbo:tbladdress">
+          <FieldMappings>
+            <FieldMapping FieldName="AddressCreateDate" TargetFieldName="address_createDate" />
+            <FieldMapping FieldName="AddressGuid" TargetFieldName="address_Guid" />
+            <FieldMapping FieldName="AddressUpdateDate" TargetFieldName="address_updateDate" />
+            <FieldMapping FieldName="City" TargetFieldName="City" />
+            <FieldMapping FieldName="PostalCode" TargetFieldName="postal_code" />
+            <FieldMapping FieldName="State" TargetFieldName="state" />
+            <FieldMapping FieldName="Street1" TargetFieldName="street1" />
+            <FieldMapping FieldName="Street2" TargetFieldName="street2" />
+            <FieldMapping FieldName="UserGuid" TargetFieldName="user_Guid" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Tblcontact" TargetName="RideShare:dbo:tblcontact">
+          <FieldMappings>
+            <FieldMapping FieldName="ContactCreateDate" TargetFieldName="contact_createDate" />
+            <FieldMapping FieldName="ContactGuid" TargetFieldName="contact_Guid" />
+            <FieldMapping FieldName="ContactType" TargetFieldName="contactType" />
+            <FieldMapping FieldName="ContactUpdateDate" TargetFieldName="contact_updateDate" />
+            <FieldMapping FieldName="ContactValue" TargetFieldName="contactValue" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="isActive" />
+            <FieldMapping FieldName="UserGuid" TargetFieldName="user_Guid" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":TblContactType" TargetName="RideShare:dbo:tblContactType">
+          <FieldMappings>
+            <FieldMapping FieldName="ContactType" TargetFieldName="contactType" />
+            <FieldMapping FieldName="ContactTypeCreateDate" TargetFieldName="contactType_CreateDate" />
+            <FieldMapping FieldName="ContactTypeGuid" TargetFieldName="contactType_Guid" />
+            <FieldMapping FieldName="ContactTypeUpdateDate" TargetFieldName="contactType_updateDate" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":TblRide" TargetName="RideShare:dbo:tblRide">
+          <FieldMappings>
+            <FieldMapping FieldName="RideCreateDate" TargetFieldName="ride_createDate" />
+            <FieldMapping FieldName="RideEndAddressGuid" TargetFieldName="rideEndAddress_Guid" />
+            <FieldMapping FieldName="RideEndDateTime" TargetFieldName="rideEndDateTime" />
+            <FieldMapping FieldName="RideFromGuid" TargetFieldName="rideFrom_GUID" />
+            <FieldMapping FieldName="RideGuid" TargetFieldName="ride_GUID" />
+            <FieldMapping FieldName="RideStartAddressGuid" TargetFieldName="rideStartAddress_Guid" />
+            <FieldMapping FieldName="RideStartDateTime" TargetFieldName="rideStartDateTime" />
+            <FieldMapping FieldName="RideToGuid" TargetFieldName="rideTo_GUID" />
+            <FieldMapping FieldName="RideUpdateDate" TargetFieldName="ride_updateDate" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":TblRideRequest" TargetName="RideShare:dbo:tblRideRequest">
+          <FieldMappings>
+            <FieldMapping FieldName="RequestCreateDate" TargetFieldName="request_createDate" />
+            <FieldMapping FieldName="RequestEndAddressGuid" TargetFieldName="requestEndAddress_Guid" />
+            <FieldMapping FieldName="RequestEndDateTime" TargetFieldName="requestEndDateTime" />
+            <FieldMapping FieldName="RequestFromGuid" TargetFieldName="requestFrom_GUID" />
+            <FieldMapping FieldName="RequestStartAddressGuid" TargetFieldName="requestStartAddress_Guid" />
+            <FieldMapping FieldName="RequestStartDateTime" TargetFieldName="requestStartDateTime" />
+            <FieldMapping FieldName="RequestToGuid" TargetFieldName="requestTo_GUID" />
+            <FieldMapping FieldName="RequestUpdateDate" TargetFieldName="request_updateDate" />
+            <FieldMapping FieldName="RideRequestGuid" TargetFieldName="rideRequest_GUID" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":TblUser" TargetName="RideShare:dbo:tblUser">
+          <FieldMappings>
+            <FieldMapping FieldName="EmailAddress" TargetFieldName="emailAddress" />
+            <FieldMapping FieldName="Password" TargetFieldName="Password" />
+            <FieldMapping FieldName="UserCreateDate" TargetFieldName="user_createDate" />
+            <FieldMapping FieldName="UserGuid" TargetFieldName="user_GUID" />
+            <FieldMapping FieldName="UserName" TargetFieldName="userName" />
+            <FieldMapping FieldName="UserUpdateDate" TargetFieldName="user_updateDate" />
+          </FieldMappings>
+        </EntityMapping>
+      </EntityMappings>
+      <TypedViewMappings>
+        <TypedViewMapping TypedViewName=":Tbladdress1" TargetName="RideShare:dbo:tbladdress">
+          <FieldMappings>
+            <FieldMapping FieldName="AddressCreateDate" TargetFieldName="address_createDate" />
+            <FieldMapping FieldName="AddressGuid" TargetFieldName="address_Guid" />
+            <FieldMapping FieldName="AddressUpdateDate" TargetFieldName="address_updateDate" />
+            <FieldMapping FieldName="City" TargetFieldName="City" />
+            <FieldMapping FieldName="PostalCode" TargetFieldName="postal_code" />
+            <FieldMapping FieldName="State" TargetFieldName="state" />
+            <FieldMapping FieldName="Street1" TargetFieldName="street1" />
+            <FieldMapping FieldName="Street2" TargetFieldName="street2" />
+            <FieldMapping FieldName="UserGuid" TargetFieldName="user_Guid" />
+          </FieldMappings>
+        </TypedViewMapping>
+        <TypedViewMapping TypedViewName=":Tblcontact1" TargetName="RideShare:dbo:tblcontact">
+          <FieldMappings>
+            <FieldMapping FieldName="ContactCreateDate" TargetFieldName="contact_createDate" />
+            <FieldMapping FieldName="ContactGuid" TargetFieldName="contact_Guid" />
+            <FieldMapping FieldName="ContactType" TargetFieldName="contactType" />
+            <FieldMapping FieldName="ContactUpdateDate" TargetFieldName="contact_updateDate" />
+            <FieldMapping FieldName="ContactValue" TargetFieldName="contactValue" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="isActive" />
+            <FieldMapping FieldName="UserGuid" TargetFieldName="user_Guid" />
+          </FieldMappings>
+        </TypedViewMapping>
+        <TypedViewMapping TypedViewName=":TblContactType1" TargetName="RideShare:dbo:tblContactType">
+          <FieldMappings>
+            <FieldMapping FieldName="ContactType" TargetFieldName="contactType" />
+            <FieldMapping FieldName="ContactTypeCreateDate" TargetFieldName="contactType_CreateDate" />
+            <FieldMapping FieldName="ContactTypeGuid" TargetFieldName="contactType_Guid" />
+            <FieldMapping FieldName="ContactTypeUpdateDate" TargetFieldName="contactType_updateDate" />
+          </FieldMappings>
+        </TypedViewMapping>
+        <TypedViewMapping TypedViewName=":TblRide1" TargetName="RideShare:dbo:tblRide">
+          <FieldMappings>
+            <FieldMapping FieldName="RideCreateDate" TargetFieldName="ride_createDate" />
+            <FieldMapping FieldName="RideEndAddressGuid" TargetFieldName="rideEndAddress_Guid" />
+            <FieldMapping FieldName="RideEndDateTime" TargetFieldName="rideEndDateTime" />
+            <FieldMapping FieldName="RideFromGuid" TargetFieldName="rideFrom_GUID" />
+            <FieldMapping FieldName="RideGuid" TargetFieldName="ride_GUID" />
+            <FieldMapping FieldName="RideStartAddressGuid" TargetFieldName="rideStartAddress_Guid" />
+            <FieldMapping FieldName="RideStartDateTime" TargetFieldName="rideStartDateTime" />
+            <FieldMapping FieldName="RideToGuid" TargetFieldName="rideTo_GUID" />
+            <FieldMapping FieldName="RideUpdateDate" TargetFieldName="ride_updateDate" />
+          </FieldMappings>
+        </TypedViewMapping>
+        <TypedViewMapping TypedViewName=":TblRideRequest1" TargetName="RideShare:dbo:tblRideRequest">
+          <FieldMappings>
+            <FieldMapping FieldName="RequestCreateDate" TargetFieldName="request_createDate" />
+            <FieldMapping FieldName="RequestEndAddressGuid" TargetFieldName="requestEndAddress_Guid" />
+            <FieldMapping FieldName="RequestEndDateTime" TargetFieldName="requestEndDateTime" />
+            <FieldMapping FieldName="RequestFromGuid" TargetFieldName="requestFrom_GUID" />
+            <FieldMapping FieldName="RequestStartAddressGuid" TargetFieldName="requestStartAddress_Guid" />
+            <FieldMapping FieldName="RequestStartDateTime" TargetFieldName="requestStartDateTime" />
+            <FieldMapping FieldName="RequestToGuid" TargetFieldName="requestTo_GUID" />
+            <FieldMapping FieldName="RequestUpdateDate" TargetFieldName="request_updateDate" />
+            <FieldMapping FieldName="RideRequestGuid" TargetFieldName="rideRequest_GUID" />
+          </FieldMappings>
+        </TypedViewMapping>
+        <TypedViewMapping TypedViewName=":TblUser1" TargetName="RideShare:dbo:tblUser">
+          <FieldMappings>
+            <FieldMapping FieldName="EmailAddress" TargetFieldName="emailAddress" />
+            <FieldMapping FieldName="Password" TargetFieldName="Password" />
+            <FieldMapping FieldName="UserCreateDate" TargetFieldName="user_createDate" />
+            <FieldMapping FieldName="UserGuid" TargetFieldName="user_GUID" />
+            <FieldMapping FieldName="UserName" TargetFieldName="userName" />
+            <FieldMapping FieldName="UserUpdateDate" TargetFieldName="user_updateDate" />
+          </FieldMappings>
+        </TypedViewMapping>
+      </TypedViewMappings>
+      <SPCallMappings />
+      <TvfCallMappings />
+      <TypeConversionDefinitions />
+    </MappingStore>
+  </MappingStores>
+  <ModelViews />
+</Project>

@@ -30,25 +30,23 @@ namespace RideShareMVC
 
             //services.AddIdentity<IdentityUser, IdentityRole>();
 
-            services.AddDbContext<PlayerDataContext>(
-                options =>
-                {
-                    var connectionString = Configuration.GetConnectionString("PlayerDataContext");
-                    options.UseSqlServer(connectionString);
-                });
+            //services.AddDbContext<PlayerDataContext>(
+            //    options =>
+            //    {
+            //        var connectionString = Configuration.GetConnectionString("PlayerDataContext");
+            //        options.UseSqlServer(connectionString);
+            //    });
 
-            services.AddDbContext<IdentityDataContext>(options =>
-            {
-                var connectionString = Configuration.GetConnectionString("IdentityDataContext");
-                options.UseSqlServer(connectionString);
-            });
+            //services.AddDbContext<IdentityDataContext>(options =>
+            //{
+            //    var connectionString = Configuration.GetConnectionString("IdentityDataContext");
+            //    options.UseSqlServer(connectionString);
+            //});
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                .AddEntityFrameworkStores<IdentityDataContext>();
+            //services.AddIdentity<IdentityUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<IdentityDataContext>();
 
-            var connection = @"Data Source=MYCOMPUTER1;Initial Catalog=RideShare;User ID=rideshareAdmin;" +
-                "Password=Password123;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;"+
-                "ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            var connection = @"Data Source=NIKESH-DESKTOP;Initial Catalog=RideShare;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             services.AddDbContext<RideShareContext>(
                 options => options.UseSqlServer(connection)
@@ -75,10 +73,11 @@ namespace RideShareMVC
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Users}/{action=Index}/{id?}");
+                    template: "{controller=tblUsers}/{action=Index}/{id?}");
             });
 
             app.UseStaticFiles();
+
         }
     }
 }

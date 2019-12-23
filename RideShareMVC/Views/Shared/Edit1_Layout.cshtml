@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    <script type="text/javascript" src="~/scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="~/scripts/site.js"></script>
+</head>
+<body>
+    <p>layout Page</p>
+
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a>TODO One of the list</a>
+                </li>
+                <li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form id="logout" action="@Url.Action("Logout","Account")" method="post">
+                            <a href="javascript: $('#logout').submit()">
+                                Logout
+                                <br /><span>@User.Identity.Name</span>
+                            </a>
+                        </form>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Login","Account")" title="Log in">Login</a>
+                    }
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Section1">
+        @if (IsSectionDefined("header"))
+        {
+            @RenderSection("header", true);
+        }
+        else
+        {
+            <h1>Section is not defined in this page</h1>
+        }
+        @*@RenderSection("header",false)*@
+    </section>
+    @RenderBody()
+</body>
+</html>
