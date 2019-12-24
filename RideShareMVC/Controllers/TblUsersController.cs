@@ -22,32 +22,62 @@ namespace RideShareMVC.Controllers
         }
 
         // GET: TblUsers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder)
         {
-            return View(await _context.TblUser.ToListAsync());
+            ViewBag.UsernameSortParam = String.IsNullOrEmpty(sortOrder) ? "username_desc" : "";
+            ViewBag.EmailSortParam = sortOrder == "email_asc" ? "email_desc" : "email_asc";
+            ViewBag.CreateDateSortParam = sortOrder == "date_asc" ? "date_desc" : "date_asc";
+
+            var users = from s in _context.TblUser
+                        select s;
+
+            switch (sortOrder)
+            {
+                case "username_desc":
+                    users = users.OrderByDescending(s => s.UserName);
+                    break;
+                case "email_asc":
+                    users = users.OrderBy(s => s.EmailAddress);
+                    break;
+                case "email_desc":
+                    users = users.OrderByDescending(s => s.EmailAddress);
+                    break;
+                case "date_asc":
+                    users = users.OrderBy(s => s.UserCreateDate);
+                    break;
+                case "date_desc":
+                    users = users.OrderByDescending(s => s.UserCreateDate);
+                    break;
+                default:
+                    users = users.OrderBy(s => s.UserName);
+                    break;
+            }
+
+            return View(await users.ToListAsync());
+            //return View(await _context.TblUser.ToListAsync());
         }
 
         // GET: TblUsers/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
-            dynamic myModel = new ExpandoObject();
-            if (id == null)
-            {
-                return NotFound();
-            }
+            //dynamic myModel = new ExpandoObject();
+            //if (id == null)
+            //{
+            //    return NotFound();
+            //}
 
-            myModel.User = await _context.TblUser.FirstOrDefaultAsync(m => m.UserGuid == id);
-            //var tblUser = await _context.TblUser
-            //    .FirstOrDefaultAsync(m => m.UserGuid == id);
-            //var tblAddress = tblUser.Tbladdress;
-            
+            //myModel.User = await _context.TblUser.FirstOrDefaultAsync(m => m.UserGuid == id);
+            var tblUser = await _context.TblUser
+                .FirstOrDefaultAsync(m => m.UserGuid == id);
+            var tblAddress = tblUser.Tbladdress;
 
-            if (myModel.User == null)
-            {
-                return NotFound();
-            }
 
-            return View(myModel);
+            //if (myModel.User == null)
+            //{
+            //    return NotFound();
+            //}
+
+            return View(tblUser);
         }
 
         // GET: TblUsers/Create

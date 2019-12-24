@@ -13,18 +13,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.UserName)
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.UserName), "Index", new { sortOrder = ViewBag.UsernameSortParam })
+                @*@Html.DisplayNameFor(model => model.UserName)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EmailAddress)
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.EmailAddress), "Index", new { sortOrder = ViewBag.EmailSortParam })
+                @*@Html.DisplayNameFor(model => model.EmailAddress)*@
             </th>
             @*<th>
                 @Html.DisplayNameFor(model => model.Password)
             </th>*@
-            @*<th>
-                @Html.DisplayNameFor(model => model.UserCreateDate)
+            <th>
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.UserCreateDate), "Index", new { sortOrder = ViewBag.CreateDateSortParam })
+                @*Html.DisplayNameFor(model => model.UserCreateDate)*@
             </th>
             <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.UserUpdateDate)
             </th>*@
             <th></th>
@@ -40,14 +44,15 @@
                 @Html.DisplayFor(modelItem => item.EmailAddress)
             </td>
             @*<td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>*@
-            @*<td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>*@
+            <td>
                 @Html.DisplayFor(modelItem => item.UserCreateDate)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserUpdateDate)
-            </td>*@
+
+            @*<td>
+            @Html.DisplayFor(modelItem => item.UserUpdateDate)
+        </td>*@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.UserGuid">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.UserGuid">Details</a> |

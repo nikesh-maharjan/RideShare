@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -18,7 +19,9 @@ namespace RideShareMVC.Models
         }
 
         public Guid UserGuid { get; set; }
+        [Display(Name ="Username")]
         public string UserName { get; set; }
+        [Display(Name ="Email")]
         public string EmailAddress { get; set; }
         public string Password { get; set; }
 
@@ -44,6 +47,7 @@ namespace RideShareMVC.Models
             return data;
         }
 
+        [Display(Name ="Create Date")]
         public DateTime? UserCreateDate { get; set; }
         public DateTime? UserUpdateDate { get; set; }
 
