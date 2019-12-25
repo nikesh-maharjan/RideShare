@@ -4,6 +4,50 @@
     ViewData["Title"] = "Index";
 }
 
+<script type="text/javascript">
+    var searchValue = $('#Search').val();
+    $(function () {
+        setTimeout(checkSearchChanged, 0.1);
+    });
+
+    function checkSearchChanged() {
+        var currentValue = $('#Search').val();
+        if ((currentValue) && currentValue != searchValue && currentValue != '') {
+            searchValue = $('#Search').val();
+            $('#submit').click();
+        }
+        else {
+            setTimeout(checkSearchChanged, 0.1);
+        }
+    }
+</script>
+
+@*using (Ajax.BeginForm("SearchResults", new AjaxOptions { UpdateTargetId = "searchResults", OnSuccess = "checkSearchChanged" }))
+{
+
+Search: <%= Html.TextBox("Search", null, new { @class = "wide" })%><input id="submit" type="submit" value="Search" />
+    <% } %>
+
+<div id="searchResults"></div>*@
+
+@*@using (Ajax.BeginForm())
+{
+    <p>
+        Find by Username: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+
+}*@
+
+@*@using (Html.BeginForm())
+    {
+        <p>
+            Find by Username: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+
+    }*@
+
 <h2>Index</h2>
 
 <p>
@@ -21,44 +65,57 @@
                 @*@Html.DisplayNameFor(model => model.EmailAddress)*@
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>*@
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>*@
             <th>
                 @Html.ActionLink(@Html.DisplayNameFor(model => model.UserCreateDate), "Index", new { sortOrder = ViewBag.CreateDateSortParam })
                 @*Html.DisplayNameFor(model => model.UserCreateDate)*@
             </th>
             <th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.UserUpdateDate)
-            </th>*@
+                @*<th>
+                        @Html.DisplayNameFor(model => model.UserUpdateDate)
+                    </th>*@
             <th></th>
         </tr>
+        @*<tr>
+                <th>
+
+                    @Html.ActionLink(@Html.DisplayNameFor(@Html.TextBox("SearchString"), "Index", new { sortOrder = ViewBag.UsernameSortParam, searchString = "nik" })
+                </th>
+                <th>
+                    @Html.TextBox("SearchString")
+                </th>
+                <th>
+                    @Html.TextBox("SearchString")
+                </th>
+            </tr>*@
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmailAddress)
-            </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.UserCreateDate)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserCreateDate)
+                </td>
 
-            @*<td>
-            @Html.DisplayFor(modelItem => item.UserUpdateDate)
-        </td>*@
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.UserGuid">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.UserGuid">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.UserGuid">Delete</a>
-            </td>
-        </tr>
-}
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.UserUpdateDate)
+                    </td>*@
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.UserGuid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.UserGuid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.UserGuid">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -22,7 +22,7 @@ namespace RideShareMVC.Controllers
         }
 
         // GET: TblUsers
-        public async Task<IActionResult> Index(string sortOrder)
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
             ViewBag.UsernameSortParam = String.IsNullOrEmpty(sortOrder) ? "username_desc" : "";
             ViewBag.EmailSortParam = sortOrder == "email_asc" ? "email_desc" : "email_asc";
@@ -31,6 +31,12 @@ namespace RideShareMVC.Controllers
             var users = from s in _context.TblUser
                         select s;
 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                users = users.Where(s => s.UserName.Contains(searchString));
+            }
+
+            //add sorting for the column headers
             switch (sortOrder)
             {
                 case "username_desc":
