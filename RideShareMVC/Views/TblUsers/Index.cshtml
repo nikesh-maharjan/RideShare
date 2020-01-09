@@ -39,36 +39,80 @@ Search: <%= Html.TextBox("Search", null, new { @class = "wide" })%><input id="su
 
 }*@
 
-@*@using (Html.BeginForm())
+@using (Html.BeginForm())
     {
         <p>
-            Find by Username: @Html.TextBox("SearchString")
+            Find by Username: @Html.TextBox("SearchString", ViewBag.CurrentFilter as String)
             <input type="submit" value="Search" />
         </p>
 
-    }*@
+    }
 
 <h2>Index</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<p style="display: -webkit-flex; /* Safari */
+        -webkit-justify-content: space-between;  /*Safari 6.1+ */
+        display:flex; 
+        justify-content:space-between;">
+    @if (ViewBag.HasPreviousPage)
+    {
+        <a id="PreviousPage" class="prev" href="@Url.Action("Index","tblUsers", new {sortOrder = ViewBag.CurrentSortOrder, page = ViewBag.PreviousPage})">
+            &lt; Previous
+        </a>
+    }
+    else
+    {
+        <a style="pointer-events:none; text-decoration:none; opacity:0.5; cursor:not-allowed;">&lt; Previous</a>
+    }
+
+   <span style="letter-spacing:10px; text-underline-position:below;">
+       @for (int i = 0; i < ViewBag.TotalPages; i++)
+       {
+           var pageNo = i+1;
+           <a href="@Url.Action("Index","tblUsers", new {sortOrder = ViewBag.CurrentSortOrder, page = @i})">@pageNo</a>
+       }
+   </span>
+
+    @if (ViewBag.HasNextPage)
+    {
+        <a class="next" href="@Url.Action("Index","tblUsers", new {page = ViewBag.NextPage})">
+            Next &gt;
+        </a>
+    }
+    else
+    {
+        <a style="pointer-events:none; text-decoration:none; opacity:0.5; cursor:not-allowed";>Next &gt;</a>
+    }
+</p>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.UserName), "Index", new { sortOrder = ViewBag.UsernameSortParam })
+                @*@if (ViewBag.CurrentSortOrder != ViewBag.UsernameSortParam) {
+                    var userNameHeader = "^";
+                }
+                else
+                {
+                    var userNameHeader = "v";
+                }*@
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.UserName), "Index", new { sortOrder = ViewBag.UsernameSortParam, currentFilter = ViewBag.CurrentFilter })
+                    
                 @*@Html.DisplayNameFor(model => model.UserName)*@
             </th>
             <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.EmailAddress), "Index", new { sortOrder = ViewBag.EmailSortParam })
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.EmailAddress), "Index", new { sortOrder = ViewBag.EmailSortParam, currentFilter = ViewBag.CurrentFilter })
                 @*@Html.DisplayNameFor(model => model.EmailAddress)*@
             </th>
             @*<th>
                     @Html.DisplayNameFor(model => model.Password)
                 </th>*@
             <th>
-                @Html.ActionLink(@Html.DisplayNameFor(model => model.UserCreateDate), "Index", new { sortOrder = ViewBag.CreateDateSortParam })
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.UserCreateDate), "Index", new { sortOrder = ViewBag.CreateDateSortParam, currentFilter = ViewBag.CurrentFilter })
                 @*Html.DisplayNameFor(model => model.UserCreateDate)*@
             </th>
             <th>

@@ -80,7 +80,7 @@ namespace RideShareMVC.Controllers
             }
 
             if (string.IsNullOrWhiteSpace(returnUrl))
-                return RedirectToAction("DisplayRiders", "Users");
+                return RedirectToAction("Index", "tblUsers");
 
             return Redirect(returnUrl);
         }

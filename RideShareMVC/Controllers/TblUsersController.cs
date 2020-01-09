@@ -22,25 +22,62 @@ namespace RideShareMVC.Controllers
         }
 
         // GET: TblUsers
-        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        public async Task<IActionResult> Index(string sortOrder, string searchString, string currentFilter, int page=0)
         {
-            ViewBag.UsernameSortParam = String.IsNullOrEmpty(sortOrder) ? "username_desc" : "";
-            ViewBag.EmailSortParam = sortOrder == "email_asc" ? "email_desc" : "email_asc";
-            ViewBag.CreateDateSortParam = sortOrder == "date_asc" ? "date_desc" : "date_asc";
-
             var users = from s in _context.TblUser
                         select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                page = 0;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
 
             if (!String.IsNullOrEmpty(searchString))
             {
                 users = users.Where(s => s.UserName.Contains(searchString));
             }
 
+            var pageSize = 20;
+            var totalUsers = users.Count();
+            var totalPages = totalUsers / pageSize;
+            totalPages = totalUsers % pageSize > 0 ? totalPages + 1 : totalPages;
+            var previousPage = page - 1;
+            var nextPage = page + 1;
+
+            ViewBag.PreviousPage = previousPage;
+            ViewBag.HasPreviousPage = previousPage >= 0;
+            ViewBag.NextPage = nextPage;
+            ViewBag.HasNextPage = nextPage < totalPages;
+            ViewBag.TotalPages = totalPages;
+            ViewBag.CurrentFilter = searchString;
+
+
+            //var players = _PlayerDb.Players
+            //    .OrderByDescending(x => x.Created)
+            //    .Skip(pageSize * page)
+            //    .Take(pageSize)
+            //    .ToArray();
+
+            //if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            //    return PartialView(players);
+
+            // return View(players);
+
+            ViewBag.CurrentSortOrder = sortOrder;
+            ViewBag.UsernameSortParam = String.IsNullOrEmpty(sortOrder) ? "username_desc" : "";
+            ViewBag.EmailSortParam = sortOrder == "email_asc" ? "email_desc" : "email_asc";
+            ViewBag.CreateDateSortParam = sortOrder == "date_asc" ? "date_desc" : "date_asc";
+            
             //add sorting for the column headers
             switch (sortOrder)
             {
                 case "username_desc":
                     users = users.OrderByDescending(s => s.UserName);
+                    //var column = 
                     break;
                 case "email_asc":
                     users = users.OrderBy(s => s.EmailAddress);
@@ -59,6 +96,9 @@ namespace RideShareMVC.Controllers
                     break;
             }
 
+            users = users.Skip(pageSize * page)
+                .Take(pageSize);
+                
             return View(await users.ToListAsync());
             //return View(await _context.TblUser.ToListAsync());
         }
@@ -195,5 +235,6 @@ namespace RideShareMVC.Controllers
         {
             return _context.TblUser.Any(e => e.UserGuid == id);
         }
+
     }
 }

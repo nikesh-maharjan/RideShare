@@ -30,7 +30,7 @@ namespace RideShareMVC
 
             services.AddMvc();
 
-            //services.AddIdentity<IdentityUser, IdentityRole>();
+            services.AddIdentity<IdentityUser, IdentityRole>();
 
             //services.AddDbContext<IdentityDataContext>(options =>
             //{
